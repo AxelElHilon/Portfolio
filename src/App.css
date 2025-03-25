@@ -114,3 +114,10 @@ form button:hover {
 
 /* Estilo para la sección About */
 
+.project-thumbnail {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
