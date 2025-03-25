@@ -41,7 +41,7 @@
     max-width: 800px;
     margin: 20px auto;
     text-align: center;
-    color: #333;
+    color: #6b6a6a;
     font-size: 18px;
     line-height: 1.6;
     font-weight: bold;
@@ -73,7 +73,7 @@
   /* Efecto hover para resaltar el borde con el resplandor */
   .about-container:hover {
     transform: scale(1.05);
-    background: rgba(190, 190, 190, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     border: 2px solid rgba(0, 204, 255, 1); 
     box-shadow: 0 0 15px rgba(0, 204, 255, 1), 0 0 30px rgba(0, 204, 255, 0.8);
   }
@@ -91,10 +91,14 @@
   }
   
   .description {
-    color: #333;
+    color: #848282;
     font-size: 18px;
     line-height: 1.6;
     font-weight: bold;
     flex: 1; /* Hace que el texto ocupe el espacio restante */
+    transition: all 0.5s ease-in ;
   }
   
+  .description:hover{
+    color: rgb(254, 254, 254);
+  }
