@@ -6,7 +6,7 @@ const About = () => {
       <h2 className="tittle">About Me</h2>
 
       <div className="about-container">
-        <img className="profile-image" src="/src/assets/images/profile.jpg" alt="Axel El Hilon" />
+        <img className="profile-image" src="/images/profile.jpg" alt="Axel El Hilon" />
 
         <p className="description">
         Soy un apasionado del diseño UX/UI y el desarrollo web, con formación en Web Development, 
@@ -19,14 +19,14 @@ const About = () => {
 
       {/* Logo de habilidades */}
       <div className="skills-logo">
-        <img src="/src/assets/images/html-logo.png" alt="HTML" />
-        <img src="/src/assets/images/css-logo.png" alt="CSS" />
-        <img src="/src/assets/images/javascript-logo.png" alt="JavaScript" />
-        <img src="/src/assets/images/react-logo.png" alt="React" />
-        <img src="/src/assets/images/adobe-aftereffects.png" alt="After Effects" />
-        <img src="/src/assets/images/illustrator-logo.png" alt="Illustrator" />
-        <img src="/src/assets/images/bootstrapt-logo.png" alt="Bootstrap" />
-        <img src="/src/assets/images/sass-logo.png" alt="Sass" />
+        <img src="/images/html-logo.png" alt="HTML" />
+        <img src="/images/css-logo.png" alt="CSS" />
+        <img src="/images/javascript-logo.png" alt="JavaScript" />
+        <img src="/images/react-logo.png" alt="React" />
+        <img src="/images/adobe-aftereffects.png" alt="After Effects" />
+        <img src="/images/illustrator-logo.png" alt="Illustrator" />
+        <img src="/images/bootstrapt-logo.png" alt="Bootstrap" />
+        <img src="/images/sass-logo.png" alt="Sass" />
       </div>
     </section>
   );
