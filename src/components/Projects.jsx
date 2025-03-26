@@ -1,5 +1,6 @@
 // src/components/Projects.js
 import React from 'react';
+import './Projects.css';
 
 const Projects = () => {
   return (
@@ -13,7 +14,7 @@ const Projects = () => {
         </p>
         <a href="https://github.com/your-github-repo" target="_blank" rel="noopener noreferrer">View on GitHub</a>
         <h3>Landing Page - Portfolio</h3>
-        <img src="public/images/page-icon.png" alt="Landing Page Portfolio" className="project-thumbnail" />
+        <img src="images/page-icon.png" alt="Landing Page Portfolio" className="project-thumbnail" />
         <p>
         Here is the page of my portfolio uploaded to GitHub, 
         where you can see the technologies I used, 

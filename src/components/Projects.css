@@ -1,0 +1,121 @@
+/* Estilos generales para la sección de proyectos */
+#projects {
+    position: relative;
+    padding: 40px 20px;
+    text-align: center; /* Centra el texto */
+    color: white;
+    overflow: hidden; /* Asegura que los bordes de la imagen no sobresalgan */
+  }
+  
+  /* Pseudo-elemento para aplicar el desenfoque solo a la imagen */
+  #projects::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/fondo.jpeg') no-repeat center center / cover; /* Fondo con imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+    filter: blur(10px); /* Desenfoque de fondo */
+    z-index: -1; /* Pone la imagen detrás del contenido */
+  }
+  
+  /* Título de la sección */
+  #projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    animation: fadeInUp 1.5s ease-out; /* Animación para el título */
+  }
+  
+  /* Estilo para las tarjetas de proyecto */
+  .project-card {
+    background-color: rgba(34, 34, 34, 0.8); /* Fondo oscuro con transparencia */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    text-align: left; /* Alineación del texto */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto hover para las tarjetas de proyecto */
+  .project-card:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 8px 20px rgba(0, 204, 255, 0.3); /* Sombra más visible al pasar el mouse */
+  }
+  
+  /* Títulos de los proyectos */
+  .project-card h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    font-weight: 600;
+    color: #00ccff; /* Color destacado para los títulos */
+    margin-bottom: 10px;
+  }
+  
+  /* Descripción de los proyectos */
+  .project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Enlaces de GitHub */
+  .project-card a {
+    color: #00ccff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto de hover para los enlaces */
+  .project-card a:hover {
+    color: #fff; /* Cambio de color en hover */
+    text-decoration: underline;
+  }
+  
+  /* Estilo para las miniaturas de los proyectos */
+  .project-thumbnail {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para las imágenes */
+  }
+  
+  /* Animación de desvanecimiento para los proyectos */
+  .project-card {
+    animation: fadeInUp 1.5s ease-out; /* Animación al cargar */
+  }
+  
+  /* Estilo para el contenedor de proyectos */
+  .project-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Móvil: ajusta el tamaño y la disposición */
+  @media (max-width: 768px) {
+    .project-card {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    #projects h2 {
+      font-size: 2rem;
+    }
+  
+    .project-thumbnail {
+      max-width: 100%;
+    }
+  }
+  

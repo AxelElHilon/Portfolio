@@ -1,0 +1,116 @@
+/* Estilos generales para la sección de contacto */
+#contact {
+  position: relative;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  margin: 40px 0;
+  overflow: hidden; /* Evita que sobresalga el fondo */
+}
+
+/* Pseudo-elemento para aplicar el desenfoque solo a la imagen de fondo */
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/fondo.jpeg') no-repeat center center / cover; /* Imagen de fondo */
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-position: center center; /* Centra la imagen */
+  background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+  filter: blur(10px); /* Aplica desenfoque */
+  z-index: -1; /* Mantiene la imagen en el fondo */
+}
+
+/* Título de la sección */
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  animation: fadeInUp 1.5s ease-out; /* Animación para el título */
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Campos del formulario */
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(34, 34, 34, 0.8); /* Fondo oscuro con transparencia */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto al enfocar los campos */
+form input:focus,
+form textarea:focus {
+  background-color: rgba(51, 51, 51, 0.9);
+  outline: none;
+}
+
+/* Estilo para el botón de envío */
+form button {
+  padding: 12px 25px;
+  background-color: #00ccff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+form button:hover {
+  background-color: #00b8cc;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes de tamaño */
+form input,
+form textarea {
+  max-width: 500px;
+}
+
+form textarea {
+  min-height: 150px;
+}
+
+/* Animación de desvanecimiento para la sección */
+#contact {
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  form input,
+  form textarea {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  form button {
+    padding: 10px 20px;
+  }
+}
