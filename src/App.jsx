@@ -6,6 +6,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import ScrollTopButton from './components/ScrollTopButton';
+import Animation from './components/Animation'; 
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <About />
       <Projects />
+      <Animation />
       <Contact />
       <ScrollTopButton /> 
     </div>
