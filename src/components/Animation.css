@@ -1,75 +1,93 @@
+.title-animation{
+  display: flex;
+  justify-content: center;
+}
+
+
 .animation-section {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    padding: 50px 20px;
-    margin: 20px 0;
-    color: white;
-    position: relative;
-    z-index: 1; /* Hace que el contenido se mantenga por encima del fondo */
-    animation: fadeInUp 1s ease-out; /* Animación de desvanecimiento y deslizamiento */
+  background-image: url('/images/fondo.jpeg'); /* Ruta a tu imagen */
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-position: center center; /* Centra la imagen */
+  background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+  padding: 50px 20px;
+  margin: 20px 0;
+  color: white;
+  position: relative;
+  z-index: 1; /* Hace que el contenido se mantenga por encima del fondo */
+  animation: fadeInUp 1s ease-out; /* Animación de desvanecimiento y deslizamiento */
+}
+
+/* Agregar el blur al fondo de la imagen con un pseudo-elemento */
+.animation-section::before {
+  content: ''; /* Necesario para crear el pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Hereda el fondo de la sección */
+  filter: blur(8px); /* Aplica el desenfoque */
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+  pointer-events: none; /* Evita que el pseudo-elemento interfiera con la interacción del usuario */
+}
+
+.animation-section h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out; /* Animación de aparición */
+}
+
+.animation-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.animation-item {
+  width: 200px;
+  margin: 10px;
+}
+
+.animation-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 204, 255, 0.6); /* Sombra luminosa */
+}
+
+.animation-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* Efecto de hover en los videos */
+.animation-item:hover .animation-video {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Título de la sección */
-  .animation-section h2 {
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 30px;
-    animation: fadeIn 1.5s ease-out; /* Animación de aparición */
+  to {
+    opacity: 1;
   }
-  
-  /* Galería de animaciones */
-  .animation-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .animation-item {
-    width: 300px;
-    margin: 10px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .animation-video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 204, 255, 0.6); /* Sombra luminosa */
-  }
-  
-  .animation-item p {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-  }
-  
-  /* Efecto de hover en los videos */
-  .animation-item:hover .animation-video {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-    box-shadow: 0 0 20px rgba(0, 204, 255, 0.8);
-    transition: all 0.3s ease;
-  }
-  
-  /* Estilos de transición */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Animación de desvanecimiento y deslizamiento */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}

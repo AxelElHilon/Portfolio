@@ -32,82 +32,6 @@ section {
   z-index: 1; /* Hace que el contenido se mantenga por encima del fondo */
 }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* Efecto de hover: Iluminación y sombra */
-nav ul li a:hover {
-  background-color:  rgba(0, 204, 255, 0.6); /* Color de fondo al hacer hover */
-  color: #333; /* Cambio de color del texto */
-  box-shadow: 0 0 10px rgba(0, 204, 255, 0.6), 0 0 20px rgba(0, 204, 255, 0.4);
-  filter: brightness(1.2); /* Brillo */
-}
-
-/* Efecto de clic (active) */
-nav ul li a:active {
-  transform: scale(1.1); /* Hace que el enlace crezca levemente */
-  filter: brightness(1.5) drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.6)); /* Brillo más fuerte */
-  transition: all 0.1s ease; /* Hace que el efecto sea rápido */
-}
-
-section {
-  padding: 20px;
-  margin: 20px 0;
-  color: black;
-}
-
-#about img {
-  width: 150px;
-  border-radius: 50%;
-}
-
-.project-card {
-  background-color: white;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 8px;
-}
-
-.project-card h3 {
-  margin-top: 0;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-form button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #555;
-}
-
 /* Animación de aparición */
 @keyframes fadeIn {
   from {
@@ -116,34 +40,4 @@ form button:hover {
   to {
     opacity: 1;
   }
-}
-
-/* Estilos para la clase de logo */
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ffffff;
-  animation: fadeIn 1.5s ease-out;
-}
-
-/* Animación de desvanecimiento y deslizamiento */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Estilo para la sección About */
-
-.project-thumbnail {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
 }

@@ -7,6 +7,7 @@ const About = () => {
 
       <div className="about-container">
         <img className="profile-image" src="/images/profile.jpg" alt="Axel El Hilon" />
+        <h3>Axel Adrian El Hilon</h3>
 
         <p className="description">
         Soy un apasionado del diseño UX/UI y el desarrollo web, con formación en Web Development, 

@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import About from './components/About';
-import Projects from './components/Projects';
+import WebDevelopment from './components/WebDevelopment';
 import Contact from './components/Contact';
 import ScrollTopButton from './components/ScrollTopButton';
 import Animation from './components/Animation'; 
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <About />
-      <Projects />
+      <WebDevelopment />
       <Animation />
       <Contact />
       <ScrollTopButton /> 

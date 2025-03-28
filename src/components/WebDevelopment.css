@@ -1,5 +1,5 @@
 /* Estilos generales para la sección de proyectos */
-#projects {
+#web {
     position: relative;
     padding: 40px 20px;
     text-align: center; /* Centra el texto */
@@ -8,7 +8,7 @@
   }
   
   /* Pseudo-elemento para aplicar el desenfoque solo a la imagen */
-  #projects::before {
+  #web::before {
     content: "";
     position: absolute;
     top: 0;
@@ -24,7 +24,7 @@
   }
   
   /* Título de la sección */
-  #projects h2 {
+  #web h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     font-weight: 700;
@@ -110,7 +110,7 @@
       padding: 15px;
     }
   
-    #projects h2 {
+    #web h2 {
       font-size: 2rem;
     }
   

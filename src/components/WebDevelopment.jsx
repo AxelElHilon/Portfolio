@@ -1,10 +1,10 @@
 // src/components/Projects.js
 import React from 'react';
-import './Projects.css';
+import './WebDevelopment.css';
 
 const Projects = () => {
   return (
-    <section id="projects">
+    <section id="web">
       <h2>My Projects</h2>
       <div className="project-card">
         <h3>Hype Gear | E-commerce</h3>

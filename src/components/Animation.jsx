@@ -4,7 +4,7 @@ import './Animation.css';
 const Animation = () => {
   return (
     <section id="animation" className="animation-section">
-      <h2>My Animations</h2>
+      <h2 className = "title-animation">My Animations</h2>
       <div className="animation-gallery">
         <div className="animation-item">
           <video
@@ -14,7 +14,7 @@ const Animation = () => {
             muted
             src="videos/animation1.mp4"
           />
-          <p>Animation 1 Description</p>
+          <p>Sewing business</p>
         </div>
         <div className="animation-item">
           <video
