@@ -3,8 +3,22 @@ import './Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
   const menuRef = useRef(null); // Referencia para el contenedor del dropdown
   const dropdownRef = useRef(null); // Referencia para el submenú
+  const lastScrollY = useRef(0); // Para comparar el scroll anterior y el actual
+
+  // Función para manejar el scroll
+  const handleScroll = () => {
+    if (window.scrollY > lastScrollY.current) {
+      // Si estamos bajando
+      setIsScrollingDown(true);
+    } else {
+      // Si estamos subiendo
+      setIsScrollingDown(false);
+    }
+    lastScrollY.current = window.scrollY;
+  };
 
   // Función para cerrar el menú cuando se hace clic fuera
   const handleClickOutside = (e) => {
@@ -21,13 +35,15 @@ const Header = () => {
   // Agregar evento para clics fuera del menú cuando el componente se monta
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
+    window.addEventListener('scroll', handleScroll); // Detectar el scroll
     return () => {
       document.removeEventListener('click', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll); // Limpiar el evento de scroll
     };
   }, []);
 
   return (
-    <header>
+    <header className={isScrollingDown ? 'hidden' : ''}> {/* Aplica la clase "hidden" cuando se hace scroll hacia abajo */}
       <div className="logo">
         <img src="/images/profile-bco.png" alt="logo de la pagina" />
       </div>
