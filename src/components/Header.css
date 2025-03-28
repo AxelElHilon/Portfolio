@@ -3,7 +3,7 @@ header {
   color: white;
   padding: 15px 0;
   text-align: center;
-  position: sticky;
+  position: sticky; /* Cambiar a fixed en móviles */
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
@@ -11,9 +11,20 @@ header {
   transition: transform 0.3s ease; /* Suaviza la transición al desaparecer */
 }
 
+/* Hacer que se mueva fuera de la vista cuando se hace scroll hacia abajo */
 header.hidden {
-  transform: translateY(-100%); /* Mueve el header hacia arriba fuera de la vista */
+  transform: translateY(-100%);
 }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  header {
+    position: fixed; /* Usar fixed en lugar de sticky en móviles */
+    width: 100%; /* Asegurarse de que el header cubra todo el ancho */
+    top: 0;
+  }
+}
+
 
 .logo img {
   width: 200px;
