@@ -4,6 +4,7 @@
   padding: 40px 20px;
   text-align: center;
   color: white;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con opacidad */
   border-radius: 8px;
   margin: 40px 0;
   overflow: hidden; /* Evita que sobresalga el fondo */

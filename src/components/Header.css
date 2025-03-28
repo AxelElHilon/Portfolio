@@ -9,6 +9,10 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease; /* Suaviza la transición al desaparecer */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5em;
 }
 
 /* Hacer que se mueva fuera de la vista cuando se hace scroll hacia abajo */
