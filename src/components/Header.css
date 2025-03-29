@@ -30,11 +30,6 @@ header.hidden {
 }
 
 
-.logo h1 {
-  width: 25px;
-  
-}
-
 nav ul {
   list-style-type: none;
   display: flex;
