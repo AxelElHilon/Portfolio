@@ -44,9 +44,7 @@ const Header = () => {
 
   return (
     <header className={isScrollingDown ? 'hidden' : ''}> {/* Aplica la clase "hidden" cuando se hace scroll hacia abajo */}
-      <div className="logo">
-        <img src="/images/profile-bco.png" alt="logo de la pagina" />
-      </div>
+     
       <nav>
         <ul>
           <li><a href="#about">About</a></li>

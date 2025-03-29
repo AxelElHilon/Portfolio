@@ -30,23 +30,9 @@ header.hidden {
 }
 
 
-.logo img {
-  width: 200px;
-  height: auto;
-  animation: float 3s ease-in-out infinite; /* Aplica la animación "float" con bucle infinito */
-}
-
-/* Definimos la animación de flotación */
-@keyframes float {
-  0% {
-    transform: translateY(0); /* Empieza en la posición original */
-  }
-  50% {
-    transform: translateY(-10px); /* Sube un poco */
-  }
-  100% {
-    transform: translateY(0); /* Vuelve a la posición original */
-  }
+.logo h1 {
+  width: 25px;
+  
 }
 
 nav ul {
